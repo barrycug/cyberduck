@@ -1510,5 +1510,15 @@ namespace Ch.Cyberduck.Ui.Winforms
         {
             SegmentedDownloadsChangedEvent();
         }
+
+        private void profilesButton_Click(object sender, EventArgs e)
+        {
+            if (!profilesButton.Checked)
+            {
+                DisableAll();
+                profilesButton.Checked = true;
+                panelManager.SelectedPanel = managedTransfersPanel;
+            }
+        }
     }
 }
